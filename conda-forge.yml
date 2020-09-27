@@ -11,8 +11,13 @@ bot:
 github:
   branch_name: main
   tooling_branch_name: main
+  user_or_org: ramonaoptics
 conda_build:
   pkg_format: '2'
 remote_ci_setup:
   - conda-forge-ci-setup=3
   - libsolv<0.7.23
+channels:
+  targets:
+  -
+    - ramonaoptics
