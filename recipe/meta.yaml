@@ -173,8 +173,8 @@ outputs:
         - xz
         - zlib
         - openssl
-        - readline  # [not win]
-        - tk
+        #- readline  # [not win]
+        - tk  # [not win]
         - ncurses  # [unix]
         - libffi
         - ld_impl_{{ target_platform }} >=2.36.1  # [linux]
