@@ -5,19 +5,19 @@ bzip2:
 c_compiler:
 - gcc
 c_compiler_version:
-- '7'
+- '7.5'
 cdt_arch:
 - aarch64
 cdt_name:
 - cos7
 channel_sources:
-- conda-forge
+- ramonaoptics,conda-forge,defaults
 channel_targets:
-- conda-forge main
+- ramonaoptics main
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '7'
+- '7.5'
 docker_image:
 - condaforge/linux-anvil-aarch64
 libffi:
@@ -38,8 +38,6 @@ pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
-  readline:
-    max_pin: x
   sqlite:
     max_pin: x
   tk:
@@ -50,8 +48,6 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - 3.8.* *_cpython
-readline:
-- '8.0'
 sqlite:
 - '3'
 target_platform:
