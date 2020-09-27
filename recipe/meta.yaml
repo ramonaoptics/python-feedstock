@@ -135,7 +135,7 @@ requirements:
     - xz  # [not win]
     - zlib  # [not win]
     - openssl
-    - readline  # [not win]
+    # - readline  # [not win]
     - tk  # [not win]
     - ncurses  # [not win]
     - libffi  # [not win]
