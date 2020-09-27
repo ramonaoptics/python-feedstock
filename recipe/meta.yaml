@@ -120,7 +120,7 @@ requirements:
     - xz                                 # [unix]
     - zlib                               # [unix]
     - openssl                            # [unix]
-    - readline                           # [unix]
+    # - readline                           # [unix]
     - tk                                 # [unix]
     - ncurses                            # [unix]
     - libffi                             # [unix]
