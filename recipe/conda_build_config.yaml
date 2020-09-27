@@ -4,3 +4,7 @@ python_impl:
   - cpython
 numpy:
   - 1.16
+channel_sources:
+  - ramonaoptics,conda-forge
+channel_targets:
+  - ramonaoptics main
