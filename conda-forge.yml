@@ -14,6 +14,7 @@ conda_forge_output_validation: true
 github:
   branch_name: main
   tooling_branch_name: main
+  user_or_org: ramonaoptics
 provider:
   linux_aarch64: default
   osx_arm64: default
