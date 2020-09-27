@@ -1,15 +1,9 @@
-BUILD:
-- aarch64-conda_cos7-linux-gnu
 bzip2:
 - '1'
 c_compiler:
 - gcc
 c_compiler_version:
-- '7.5'
-cdt_arch:
-- aarch64
-cdt_name:
-- cos7
+- '8'
 channel_sources:
 - ramonaoptics,conda-forge,defaults
 channel_targets:
@@ -17,9 +11,9 @@ channel_targets:
 cxx_compiler:
 - gxx
 cxx_compiler_version:
-- '7.5'
+- '8'
 docker_image:
-- condaforge/linux-anvil-aarch64
+- condaforge/linux-anvil-ppc64le
 libffi:
 - '3.2'
 ncurses:
@@ -40,20 +34,16 @@ pin_run_as_build:
     max_pin: x.x
   sqlite:
     max_pin: x
-  tk:
-    max_pin: x.x
   xz:
     max_pin: x.x
   zlib:
     max_pin: x.x
 python:
-- 3.6.* *_cpython
+- '3.6'
 sqlite:
 - '3'
 target_platform:
-- linux-aarch64
-tk:
-- '8.6'
+- linux-ppc64le
 xz:
 - '5.2'
 zlib:
