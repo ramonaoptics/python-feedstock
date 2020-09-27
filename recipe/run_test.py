@@ -81,7 +81,8 @@ if sys.platform != 'win32':
     import fcntl
     import grp
     import nis
-    import readline
+    # We don't compile for readline
+    # import readline
     import resource
     import syslog
     import termios
