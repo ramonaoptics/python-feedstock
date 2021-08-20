@@ -79,7 +79,8 @@ source:
     sha256: 4872e72e188a5aa1124db0c3b163a4163e84ead359a514d86dd7c6fa2d2ff02a         # [win]
 
 build:
-  number: 1
+  # Use 100 build numbers for ramonaoptics
+  number: 101
   script_env:
     - PY_INTERP_LINKAGE_NATURE
     - PY_INTERP_DEBUG
@@ -148,7 +149,6 @@ outputs:
         - xz  # [not win]
         - zlib  # [not win]
         - openssl
-        - readline  # [not win]
         - tk  # [not win]
         - ncurses  # [linux]
         - libffi  # [not win]
