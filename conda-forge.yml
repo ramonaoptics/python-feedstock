@@ -7,3 +7,9 @@ bot:
     - 3.6
     - 3.7
     - 3.8
+github:
+  user_or_org: ramonaoptics
+channels:
+  targets:
+  -
+    - ramonaoptics
