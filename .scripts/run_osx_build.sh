@@ -25,6 +25,7 @@ conda activate base
 echo -e "\n\nInstalling conda-forge-ci-setup=3 and conda-build."
 conda install -n base --quiet --yes "conda-forge-ci-setup=3" conda-build pip ${GET_BOA:-}
 
+conda remove readline --force --offline --yes
 
 
 echo -e "\n\nSetting up the condarc and mangling the compiler."
