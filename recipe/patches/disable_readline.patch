@@ -1,0 +1,16 @@
+diff --git a/setup.py b/setup.py
+index 04eb6b2..251f0d1 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1782,7 +1782,10 @@ class PyBuildExt(build_ext):
+         self.detect_simple_extensions()
+         if TEST_EXTENSIONS:
+             self.detect_test_extensions()
+-        self.detect_readline_curses()
++        # self.detect_readline_curses()
++        self.missing.append('readline')
++        self.missing.append('_curses_panel')
++        self.missing.append('_curses')
+         self.detect_crypt()
+         self.detect_socket()
+         self.detect_openssl_hashlib()
