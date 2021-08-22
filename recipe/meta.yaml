@@ -18,9 +18,6 @@ source:
     md5: d9eee4b20155553830a2025e4dcaa7b3
     patches:
       - patches/0001-Fix-off-by-one-error-in-_winapi_WaitForMultipleObjec.patch
-{% if 'conda-forge' not in channel_targets %}
-      - patches/0002-Add-Anaconda-Distribution-version-logic.patch
-{% endif %}
       - patches/0003-Darwin-Add-arch-x86_64-to-UnicCCompiler-ld_args.patch
       - patches/0004-Win32-Change-FD_SETSIZE-from-512-to-2048.patch
       - patches/0005-Win32-distutils-Add-support-to-cygwinccompiler-for-V.patch
