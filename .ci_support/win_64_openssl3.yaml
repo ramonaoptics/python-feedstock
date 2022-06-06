@@ -3,9 +3,9 @@ bzip2:
 c_compiler:
 - vs2017
 channel_sources:
-- conda-forge
+- ramonaoptics,conda-forge,defaults
 channel_targets:
-- conda-forge main
+- ramonaoptics main
 cxx_compiler:
 - vs2017
 libffi:
@@ -22,8 +22,6 @@ pin_run_as_build:
     max_pin: x.x
   sqlite:
     max_pin: x
-  tk:
-    max_pin: x.x
   xz:
     max_pin: x.x
   zlib:
@@ -34,8 +32,6 @@ sqlite:
 - '3'
 target_platform:
 - win-64
-tk:
-- '8.6'
 xz:
 - '5.2'
 zlib:
