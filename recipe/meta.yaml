@@ -8,8 +8,10 @@
 # Use a high build number (starting at 100) to indicate ramona optics builds
 {% set build_number = build_number + 100 %}
 
+# Trick the rest of the recipe thinking that we are building for conda-forge
+# but really uploading to our own.
 # this makes the linter happy
-{% set channel_targets = channel_targets or 'conda-forge main' %}
+{% set channel_targets = 'conda-forge main' %}
 
 # Sanitize build system env. var tweak parameters
 # (passed to the build scripts via script_env).
