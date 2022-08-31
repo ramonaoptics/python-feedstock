@@ -35,7 +35,7 @@ def patch_get_version(msg):
 
 msg = os.environ.get('python_branding', '<undefined>')
 if msg == '<undefined>':
-    msg = "| packaged by conda-forge |" 
+    msg = "| packaged by Ramona Optics |"
 
 patch_platform(msg)
 patch_get_version(msg)
