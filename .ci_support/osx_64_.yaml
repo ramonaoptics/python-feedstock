@@ -9,9 +9,9 @@ c_compiler:
 c_compiler_version:
 - '14'
 channel_sources:
-- conda-forge
+- ramonaoptics,conda-forge
 channel_targets:
-- conda-forge main
+- ramonaoptics main
 cxx_compiler:
 - clangxx
 cxx_compiler_version:
@@ -30,8 +30,6 @@ pin_run_as_build:
     max_pin: x.x
 python:
 - '3.9'
-readline:
-- '8'
 sqlite:
 - '3'
 target_platform:
