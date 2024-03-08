@@ -6,9 +6,3 @@ github:
   user_or_org: ramonaoptics
 conda_build:
   pkg_format: '2'
-test: native_and_emulated
-
-channels:
-  targets:
-  -
-    - ramonaoptics
