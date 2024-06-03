@@ -3,9 +3,9 @@ bzip2:
 c_compiler:
 - vs2017
 channel_sources:
-- conda-forge
+- ramonaoptics,conda-forge
 channel_targets:
-- conda-forge main
+- ramonaoptics main
 cxx_compiler:
 - vs2017
 libffi:
@@ -22,8 +22,6 @@ sqlite:
 - '3'
 target_platform:
 - win-64
-tk:
-- '8.6'
 xz:
 - '5'
 zlib:
