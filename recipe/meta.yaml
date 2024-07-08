@@ -100,6 +100,7 @@ source:
 
 build:
   number: {{ build_number }}
+  skip: true  # [not linux64]
   python_site_packages_path: {{ site_packages_path }}
   script_env:
     - PY_INTERP_DEBUG={{ py_interp_debug }}
