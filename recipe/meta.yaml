@@ -161,7 +161,7 @@ outputs:
         - binutils_impl_{{ target_platform }}  # [linux]
 {% endif %}
         - tk        # [build_platform != target_platform]
-        - readline  # [build_platform != target_platform]
+        # - readline  # [build_platform != target_platform]
         - ncurses   # [build_platform != target_platform]
         - zlib      # [build_platform != target_platform]
       host:
@@ -170,7 +170,7 @@ outputs:
         - xz
         - zlib
         - openssl
-        - readline  # [not win]
+        # - readline  # [not win]
         - tk
         - ncurses  # [unix]
         - libffi
