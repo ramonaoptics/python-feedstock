@@ -75,6 +75,10 @@ source:
 
 build:
   number: {{ build_number }}
+  skip: true  # [win]
+  skip: true  # [osx]
+  skip: true  # [ppc64le]
+  skip: true  # [aarch64]
 
 requirements:
   build:
