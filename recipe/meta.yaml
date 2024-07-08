@@ -169,7 +169,7 @@ outputs:
         - openssl        # [build_platform != target_platform]
         - readline       # [not win and build_platform != target_platform]
         - tk             # [build_platform != target_platform]
-        - ncurses        # [unix and build_platform != target_platform]
+        # - readline  # [build_platform != target_platform]
         - libffi         # [build_platform != target_platform]
         - libnsl         # [linux and build_platform != target_platform]
         - libuuid        # [linux and build_platform != target_platform]
@@ -181,7 +181,7 @@ outputs:
         - liblzma-devel
         - zlib
         - openssl
-        - readline  # [not win]
+        # - readline  # [not win]
         - tk
         # These two are just to get the headers needed for tk.h, but is unused
         - xorg-libx11       # [unix]
@@ -213,6 +213,7 @@ outputs:
         - ninja
         - {{ stdlib('c') }}
         - {{ compiler('c') }}
+        - {{ stdlib('c') }}
         # Tried to use enable_language(C) to avoid needing this. It does not work.
         - {{ compiler('cxx') }}
         # For tkinter, but we expect from system
@@ -310,6 +311,7 @@ outputs:
       requires:
         - {{ stdlib('c') }}
         - {{ compiler('c') }}
+        - {{ stdlib('c') }}
       commands:
         - VER=${PKG_VERSION%.*}   # [not win]
 {% if py_interp_debug == "yes" %}
