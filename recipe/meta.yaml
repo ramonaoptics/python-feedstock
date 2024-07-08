@@ -132,7 +132,6 @@ requirements:
     - libxcrypt         # [build_platform != target_platform and linux]
     - ncurses           # [build_platform != target_platform and unix]
     - openssl           # [build_platform != target_platform]
-    - readline          # [build_platform != target_platform and unix]
     - tk                # [build_platform != target_platform]
     - zlib              # [build_platform != target_platform]
     - zstd              # [build_platform != target_platform]
@@ -147,7 +146,6 @@ requirements:
     - libuuid           # [linux]
     - ncurses           # [unix]
     - openssl
-    - readline          # [unix]
     - tk
     # These two are just to get the headers needed for tk.h, but is unused
     - xorg-libx11       # [unix]
@@ -226,7 +224,6 @@ outputs:
         - zlib
         - zstd
         - openssl
-        - readline  # [not win]
         - tk
         # These two are just to get the headers needed for tk.h, but is unused
         - xorg-libx11       # [unix]
