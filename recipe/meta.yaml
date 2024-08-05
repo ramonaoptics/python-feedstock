@@ -160,7 +160,7 @@ outputs:
         - binutils_impl_{{ target_platform }}  # [linux]
       host:
         - bzip2
-        - sqlite
+        - libsqlite
         - xz
         - zlib
         - openssl
