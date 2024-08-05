@@ -177,7 +177,7 @@ outputs:
         - expat          # [build_platform != target_platform]
       host:
         - bzip2
-        - sqlite
+        - libsqlite
         - liblzma-devel
         - zlib
         - openssl
