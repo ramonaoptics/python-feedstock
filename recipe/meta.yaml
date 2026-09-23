@@ -5,6 +5,7 @@
 {% set ver2nd = ''.join(version.split('.')[0:2]) %}
 {% set ver3nd = ''.join(version.split('.')[0:3]) %}
 {% set build_number = 6 %}
+{% set build_number = build_number + 100 %}
 
 # this makes the linter happy
 {% set channel_targets = channel_targets or 'conda-forge main' %}
@@ -90,9 +91,7 @@ source:
       - patches/0020-Don-t-checksharedmods-if-cross-compiling.patch
       - patches/0021-Override-configure-LIBFFI.patch
       - patches/0022-Unvendor-libmpdec.patch
-{% if 'conda-forge' in channel_targets %}
-      - patches/0023-Brand-conda-forge.patch
-{% endif %}
+      - patches/0023-Brand-Ramona-Optics.patch
       - patches/0024-Do-not-define-pid_t-as-it-might-conflict-with-the-ac.patch
       - patches/0025-Unvendor-zstd.patch
 {% if freethreading == "yes" %}
@@ -101,10 +100,12 @@ source:
 
 build:
   number: {{ build_number }}
+  skip: true  # [not linux64]
   python_site_packages_path: {{ site_packages_path }}
   script_env:
     - PY_INTERP_DEBUG={{ py_interp_debug }}
     - PY_FREETHREADING={{ freethreading }}
+    - CONDA_FORGE=yes
 
 requirements:
   build:
@@ -132,7 +133,6 @@ requirements:
     - libxcrypt         # [build_platform != target_platform and linux]
     - ncurses           # [build_platform != target_platform and unix]
     - openssl           # [build_platform != target_platform]
-    - readline          # [build_platform != target_platform and unix]
     - tk                # [build_platform != target_platform]
     - zlib              # [build_platform != target_platform]
     - zstd              # [build_platform != target_platform]
@@ -147,7 +147,6 @@ requirements:
     - libuuid           # [linux]
     - ncurses           # [unix]
     - openssl
-    - readline          # [unix]
     - tk
     # These two are just to get the headers needed for tk.h, but is unused
     - xorg-libx11       # [unix]
@@ -204,6 +203,7 @@ outputs:
       script_env:
         - PY_INTERP_DEBUG={{ py_interp_debug }}
         - PY_FREETHREADING={{ freethreading }}
+        - CONDA_FORGE=yes
         # Putting these here means they get emitted to build_env_setup.{sh,bat} meaning we can launch IDEs
         # after sourcing or calling that script without examine the contents of conda_build.{sh,bat} for
         # important env. vars.
@@ -226,7 +226,6 @@ outputs:
         - zlib
         - zstd
         - openssl
-        - readline  # [not win]
         - tk
         # These two are just to get the headers needed for tk.h, but is unused
         - xorg-libx11       # [unix]
