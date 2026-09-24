@@ -16,7 +16,7 @@ is_python_min:
 
 # Whether to build free-threaded Python (3.13+)
 freethreading:
-  - yes
+  # - yes
   - no
 
 # Use Python RC components in build
