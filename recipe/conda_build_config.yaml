@@ -26,10 +26,10 @@ channel_sources:
 # Configuration for debug and release builds
 build_type:
   - release
-  - debug                      # [not win]
+  # - debug                      # [not win]
 channel_targets:
   - ramonaoptics main
-  - ramonaoptics python_debug   # [not win]
+  # - ramonaoptics python_debug   # [not win]
 zip_keys:
   - build_type
   - channel_targets
