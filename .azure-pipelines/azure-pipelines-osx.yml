@@ -8,8 +8,8 @@ jobs:
     vmImage: $(VMIMAGE)
   strategy:
     matrix:
-      osx_arm64_build_typedebugchannel_targetsramonaoptics_python_debugfreethreadingno:
-        CONFIG: osx_arm64_build_typedebugchannel_targetsramonaoptics_python_debugfreethreadingno
+      osx_arm64_:
+        CONFIG: osx_arm64_
         UPLOAD_PACKAGES: 'True'
         VMIMAGE: macOS-15-arm64
         build_workspace_dir: ~/miniforge3/conda-bld
@@ -18,40 +18,7 @@ jobs:
         resize_partitions: false
         store_build_artifacts: true
         tools_install_dir: ~/miniforge3
-        CONFIG_SHORT: osx_arm64_build_typedebugchannel_targets_h54c8088a
-      osx_arm64_build_typedebugchannel_targetsramonaoptics_python_debugfreethreadingyes:
-        CONFIG: osx_arm64_build_typedebugchannel_targetsramonaoptics_python_debugfreethreadingyes
-        UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15-arm64
-        build_workspace_dir: ~/miniforge3/conda-bld
-        free_disk_space: skip
-        pagefile_size: 0
-        resize_partitions: false
-        store_build_artifacts: true
-        tools_install_dir: ~/miniforge3
-        CONFIG_SHORT: osx_arm64_build_typedebugchannel_targets_hed774281
-      osx_arm64_build_typereleasechannel_targetsramonaoptics_mainfreethreadingno:
-        CONFIG: osx_arm64_build_typereleasechannel_targetsramonaoptics_mainfreethreadingno
-        UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15-arm64
-        build_workspace_dir: ~/miniforge3/conda-bld
-        free_disk_space: skip
-        pagefile_size: 0
-        resize_partitions: false
-        store_build_artifacts: true
-        tools_install_dir: ~/miniforge3
-        CONFIG_SHORT: osx_arm64_build_typereleasechannel_targe_hee0add06
-      osx_arm64_build_typereleasechannel_targetsramonaoptics_mainfreethreadingyes:
-        CONFIG: osx_arm64_build_typereleasechannel_targetsramonaoptics_mainfreethreadingyes
-        UPLOAD_PACKAGES: 'True'
-        VMIMAGE: macOS-15-arm64
-        build_workspace_dir: ~/miniforge3/conda-bld
-        free_disk_space: skip
-        pagefile_size: 0
-        resize_partitions: false
-        store_build_artifacts: true
-        tools_install_dir: ~/miniforge3
-        CONFIG_SHORT: osx_arm64_build_typereleasechannel_targe_hd818c5b7
+        CONFIG_SHORT: osx_arm64_
   timeoutInMinutes: 360
   variables: {}
 
